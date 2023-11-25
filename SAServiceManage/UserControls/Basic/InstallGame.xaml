@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="SAServiceManage.UserControls.Basic.InstallGame"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SAServiceManage.UserControls.Basic"
+             mc:Ignorable="d" 
+              xmlns:hc="https://handyorg.github.io/handycontrol" 
+               DataContext="{Binding InstallGameView,Source={StaticResource Locator}}"
+            >
+    <hc:Card    Height="50" BorderThickness="0" Effect="{DynamicResource Left2Right}" Margin="8">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="0.3*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock    Margin="35 0 0 0" HorizontalAlignment="Left" FontSize="14" FontWeight="Bold" VerticalAlignment="Center" Text="{Binding GameContent}"  ></TextBlock>
+            <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Center">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <RadioButton  Margin="10" Content="测试版本" Background="#FF1D1D1D" BorderBrush="#FF1F1D1A"/>
+                    <RadioButton  Margin="10" Grid.Column="1" IsChecked="True"  Content="正式版"  Background="#FF363636" BorderBrush="#FF1F1D1A"/>
+                </Grid>
+            </StackPanel>
+            <Button Grid.Column="2" Width="130" IsEnabled="{Binding IsStartButton}" Command="{Binding InstallGameCmd}"  Background="#fff" Content="{Binding IsInstallGameButtonCotent}" Margin="10"  HorizontalAlignment="Right" ></Button>
+        </Grid>
+    </hc:Card>
+</UserControl>

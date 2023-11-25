@@ -1,0 +1,49 @@
+﻿<Border     x:Class="SAServiceManage.UserControls.Main.LeftMainContent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SAServiceManage.UserControls.Main"
+             mc:Ignorable="d" 
+             
+              xmlns:hc="https://handyorg.github.io/handycontrol" 
+              xmlns:langs="clr-namespace:SAServiceManage.Properties.Langs"
+              DataContext="{Binding MainMenuView,Source={StaticResource Locator}}"
+             >
+      <Border.Effect>
+        <DropShadowEffect Color="#19E8E8E8" BlurRadius="10" Direction="310"/>
+    </Border.Effect>
+
+    <hc:SideMenu BorderThickness="1"  Name="Menu" Width="150" AutoSelect="True"  >
+
+
+        <hc:Interaction.Triggers>
+            <hc:EventTrigger EventName="SelectionChanged">
+                <hc:EventToCommand Command="{Binding SwitchItemCmd}" PassEventArgsToCommand="True" />
+            </hc:EventTrigger>
+        </hc:Interaction.Triggers>
+        <hc:SideMenuItem Header="服务器安装" Command="{Binding SelectCmd}"  Tag="DefaultPage" CommandParameter="{Binding Tag,RelativeSource={RelativeSource Self}}">
+            <hc:SideMenuItem.Icon>
+                <Image Source="/Resources/Img/Menu/任务环境设置.png" Width="20" Height="20" 
+                  RenderOptions.BitmapScalingMode="HighQuality"
+                  UseLayoutRounding="True"
+                  SnapsToDevicePixels="True"/>
+            </hc:SideMenuItem.Icon>
+            <!--<hc:SideMenuItem  Command="{Binding SelectCmd}" Tag="DefaultPage"  CommandParameter="{Binding  Tag,RelativeSource={RelativeSource Self}}"                           HorizontalContentAlignment="Center" Header=""></hc:SideMenuItem>
+            <hc:SideMenuItem Command="{Binding SelectCmd}"  Tag="DefaultPage" CommandParameter="{Binding Tag,RelativeSource={RelativeSource Self}}"  HorizontalContentAlignment="Center" Header=""></hc:SideMenuItem>-->
+        </hc:SideMenuItem>
+
+        <hc:SideMenuItem Header="服务器设置" Command="{Binding SelectCmd}"  Tag="DefaultPage" CommandParameter="{Binding Tag,RelativeSource={RelativeSource Self}}">
+            <hc:SideMenuItem.Icon>
+                <Image Source="/Resources/Img/Menu/任务环境设置.png" Width="20" Height="20" 
+                  RenderOptions.BitmapScalingMode="HighQuality"
+                  UseLayoutRounding="True"
+                  SnapsToDevicePixels="True"/>
+            </hc:SideMenuItem.Icon>
+            <!--<hc:SideMenuItem  Command="{Binding SelectCmd}" Tag="DefaultPage"  CommandParameter="{Binding  Tag,RelativeSource={RelativeSource Self}}"                           HorizontalContentAlignment="Center" Header=""></hc:SideMenuItem>
+            <hc:SideMenuItem Command="{Binding SelectCmd}"  Tag="DefaultPage" CommandParameter="{Binding Tag,RelativeSource={RelativeSource Self}}"  HorizontalContentAlignment="Center" Header=""></hc:SideMenuItem>-->
+        </hc:SideMenuItem>
+    </hc:SideMenu>
+
+
+</Border>

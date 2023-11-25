@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="SAServiceManage.UserControls.Basic.ServiceStart"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SAServiceManage.UserControls.Basic"
+             mc:Ignorable="d" 
+             DataContext="{Binding ServiceStartView,Source={StaticResource Locator}}"
+              xmlns:hc="https://handyorg.github.io/handycontrol" 
+           >
+    <StackPanel Orientation="Vertical" >
+        <hc:Card    Height="50" BorderThickness="0" Effect="{DynamicResource Left2Right}" Margin="8">
+
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left">
+
+                <Label Margin="10 0 0 0" BorderBrush="Transparent" Content="绑定IP"></Label>
+                <hc:TextBox hc:InfoElement.Placeholder="不填写默认绑定为所有可用IP"  Width="200" Background="#FFF" Height="40" Text="{Binding multihome}"/>
+
+                <Label Margin="10 0 0 0" BorderBrush="Transparent" Content="查询端口"></Label>
+                <hc:TextBox hc:InfoElement.Placeholder="不填写默认端口为15777"  Width="150" Background="#FFF" Height="40" Text="{Binding ServerQueryPort}"/>
+
+                <Label Margin="10 0 0 0" BorderBrush="Transparent" Content="信标端口"></Label>
+                <hc:TextBox hc:InfoElement.Placeholder="不填写默认端口为15000"  Width="150" Background="#FFF" Height="40" Text="{Binding BeaconPort}"/>
+
+                <Label Margin="10 0 0 0" BorderBrush="Transparent" Content="游戏端口"></Label>
+                <hc:TextBox hc:InfoElement.Placeholder="不填写默认端口为7777"  Width="150" Background="#FFF" Height="40" Text="{Binding Port}"/>
+
+
+            </StackPanel>
+        </hc:Card>
+        <hc:Card    Height="50" BorderThickness="0" Effect="{DynamicResource Left2Right}" Margin="8">
+      
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                </Grid.ColumnDefinitions>
+                 
+                <ToggleButton Grid.Column="1"  IsChecked="{Binding IsServerDete}" HorizontalAlignment="Right"  Style="{DynamicResource ToggleButtonStyle1}"  Margin="10" Width="150" Content="服务器自动自启" BorderBrush="#FFFAFFFE"></ToggleButton>
+                <Button Grid.Column="2" Width="130"  Command="{Binding StartButton}"  Background="#fff" Content="{Binding StartButtonContent}" Margin="10"  HorizontalAlignment="Right" ></Button>
+
+            </Grid>
+          
+      
+    </hc:Card>
+
+    
+       
+    </StackPanel>
+</UserControl>

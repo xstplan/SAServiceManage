@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="SAServiceManage.UserControls.Basic.help"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SAServiceManage.UserControls.Basic"
+             mc:Ignorable="d" 
+               xmlns:hc="https://handyorg.github.io/handycontrol" 
+             >
+    <hc:TransitioningContentControl>
+        <hc:Card     BorderThickness="0" Effect="{DynamicResource Left2Right}" Margin="8">
+            <StackPanel Orientation="Vertical"  HorizontalAlignment="Right">
+             
+                <StackPanel Orientation="Horizontal">
+                    <!--<Button  hc:IconElement.Geometry="{StaticResource AddGeometry}" hc:IconElement.Width="20" />-->
+                    <Button Background="#5F0096" BorderBrush="Transparent" Content="打开服务器存档" Click="Button_Click"  Margin="10" Foreground="White"></Button>
+                    <Button Background="#5F0096" BorderBrush="Transparent" Content="官网文档" Name="Severt_WWW" Click="Severt_WWW_Click"  Margin="10" Foreground="White"></Button>
+                    <Button Background="#5F0096" BorderBrush="Transparent" ToolTip="如有问题反馈或者建议加入我们吧"  Content="反馈QQ群" Name="QQG" Click="linkHelp_Click"  Margin="10" Foreground="White"></Button>
+                    <Button Background="#5F0096" BorderBrush="Transparent"   Content="关于" ToolTip="关于这个工具不会收费的" Name="My" Click="My_Click"  Margin="10" Foreground="White"></Button>
+
+
+                </StackPanel>
+            </StackPanel>
+        </hc:Card>
+    </hc:TransitioningContentControl>
+</UserControl>

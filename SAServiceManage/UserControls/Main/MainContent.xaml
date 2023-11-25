@@ -1,0 +1,14 @@
+﻿<Grid x:Class="SAServiceManage.UserControls.Main.MainContent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SAServiceManage.UserControls.Main"
+             mc:Ignorable="d" 
+          xmlns:hc="https://handyorg.github.io/handycontrol" 
+             DataContext="{Binding MainMenuView,Source={StaticResource Locator}}"
+             >
+    <hc:Watermark Mark="PLAN" FontSize="50" MarkBrush="#20A2A2A2"  FontWeight="Bold" MarkMargin="40,40"  />
+    <ContentControl   x:Name="x" Content="{Binding BasicUserControl}"/>
+    <ContentControl x:Name="h"  VerticalAlignment="Bottom"></ContentControl>
+</Grid>
