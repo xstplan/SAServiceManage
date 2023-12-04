@@ -3,6 +3,7 @@
 
 
 ![image](https://github.com/xstplan/SAServiceManage/assets/40187282/75fdd17d-e279-4233-baf5-c6ad5092f56d)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fxstplan%2FSAServiceManage.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fxstplan%2FSAServiceManage?ref=badge_shield)
 - 第一步安装 SteamCMD
 - 第二部安装 服务器
 - 启动服务器即可
@@ -10,3 +11,7 @@
 ✅一键启动  
 ✅开机自启  
 ✅端口更改  
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fxstplan%2FSAServiceManage.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fxstplan%2FSAServiceManage?ref=badge_large)
