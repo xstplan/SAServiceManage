@@ -12,6 +12,3 @@
 ✅开机自启  
 ✅端口更改  
 
-
-## License
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fxstplan%2FSAServiceManage.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fxstplan%2FSAServiceManage?ref=badge_large)
